@@ -1,0 +1,27 @@
+.container{
+    text-align: center;
+}
+
+.row{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none; 
+    color: white; 
+}
+
+a:hover{
+    text-decoration: none; 
+    color: rgb(245, 0, 0);
+}
+
+.user-list{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    list-style-position: inside;
+}
