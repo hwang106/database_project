@@ -5,17 +5,16 @@ from flask import render_template
 from flask import request
 from flask import redirect, session, url_for
 from flask_pymongo import PyMongo
+import os
 
 # -- Initialization section --
 app = Flask(__name__)
-app.secret_key = '\xc6\x98?o\xfb\x92D\r\xd5\xbd\x10\xab\x1b\xf3'
-
+app.secret_key = os.getenv('session_secret_key')
 # name of database
 app.config['MONGO_DBNAME'] = 'upperline'
 
 # URI of database
-app.config['MONGO_URI'] = 'mongodb+srv://admin:Un3wsHLhXJA7h3nR@cluster0.ombjr.mongodb.net/upperline?retryWrites=true&w=majority'
-
+app.config['MONGO_URI'] = os.getenv('mongo_URI')
 mongo = PyMongo(app)
 
 # -- Routes section --
